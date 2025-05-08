@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Калькулятор ремонта Poisk123 Pro",
+  "version": "1.4",
+  "description": "Расчет стоимости ремонта с фиксированными ценами за сложность",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon48.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://poisk123.ru/*"],
+    "css": ["styles.css"],
+    "js": ["content.js"],
+    "run_at": "document_end"
+  }],
+  "permissions": ["storage"],
+  "host_permissions": ["*://poisk123.ru/*"]
+}

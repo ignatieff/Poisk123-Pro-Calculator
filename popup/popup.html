@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Настройки калькулятора</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="settings-container">
+    <h3>Настройки калькулятора</h3>
+    
+    <div class="form-group">
+      <label for="delivery">Стоимость доставки (₽):</label>
+      <input type="number" id="delivery" min="0">
+    </div>
+    
+    <div class="form-group">
+      <label for="expenses">Прочие расходы (₽):</label>
+      <input type="number" id="expenses" min="0">
+    </div>
+    
+    <div class="divider"></div>
+    
+    <h4>Фиксированные цены за работу:</h4>
+    
+    <div class="complexity-settings">
+      <div class="setting-item">
+        <div class="signal-preview">
+          <div class="bar filled"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <input type="number" id="easy" min="0" placeholder="₽">
+        <label>Лёгкий ремонт</label>
+      </div>
+      
+      <div class="setting-item">
+        <div class="signal-preview">
+          <div class="bar filled"></div>
+          <div class="bar filled"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <input type="number" id="medium" min="0" placeholder="₽">
+        <label>Средний ремонт</label>
+      </div>
+      
+      <div class="setting-item">
+        <div class="signal-preview">
+          <div class="bar filled"></div>
+          <div class="bar filled"></div>
+          <div class="bar filled"></div>
+          <div class="bar"></div>
+        </div>
+        <input type="number" id="hard" min="0" placeholder="₽">
+        <label>Сложный ремонт</label>
+      </div>
+      
+      <div class="setting-item">
+        <div class="signal-preview">
+          <div class="bar filled"></div>
+          <div class="bar filled"></div>
+          <div class="bar filled"></div>
+          <div class="bar filled"></div>
+        </div>
+        <input type="number" id="risky" min="0" placeholder="₽">
+        <label>Высокий риск</label>
+      </div>
+    </div>
+    
+    <button id="save-btn">Сохранить настройки</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
